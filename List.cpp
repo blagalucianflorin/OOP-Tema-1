@@ -52,8 +52,16 @@ List &List::operator+ (List const &second_list)
 
 std::ostream &operator<< (std::ostream &os, const List &myList)
 {
+    std::cout << "From head to tail: ";
     for (int i = 0; i < myList . size (); i++)
         os << myList . index (i) << " ";
+    std::cout << std::endl;
+
+    std::cout << "From tail to head: ";
+    for (int i = myList.size () - 1; i >= 0; i--)
+        os << myList . index (i) << " ";
+    std::cout << std::endl;
+
     return os;
 }
 
